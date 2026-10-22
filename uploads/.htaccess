@@ -1,0 +1,7 @@
+# Uploaded files (property images/videos/audio, lead documents) must
+# never be executed as scripts, only served as static files.
+<FilesMatch "\.(php|phtml|php\d?|phar|cgi|pl)$">
+  Require all denied
+</FilesMatch>
+Options -ExecCGI
+AddType text/plain .php .phtml .cgi .pl

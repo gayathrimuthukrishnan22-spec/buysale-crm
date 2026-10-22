@@ -1,0 +1,102 @@
+.btn-outline-accent {
+  background: #fff;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  font-weight: 600;
+}
+.btn-outline-accent:hover {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.lead-step-dots {
+  display: flex;
+  justify-content: space-between;
+  gap: 4px;
+}
+.lead-step-dot {
+  flex: 1;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+}
+.lead-step-dot .dot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #eef0f5;
+  color: #6b7280;
+  font-weight: 700;
+  font-size: .82rem;
+  margin-bottom: 4px;
+}
+.lead-step-dot .lbl {
+  display: block;
+  font-size: .7rem;
+  font-weight: 600;
+  color: #8a8f98;
+}
+.lead-step-dot.active .dot {
+  background: var(--accent);
+  color: #fff;
+}
+.lead-step-dot.active .lbl { color: var(--accent); }
+.lead-step-dot.done .dot { background: var(--accent-soft); color: var(--accent); }
+
+.lead-step-body { min-height: 140px; }
+.lead-step-body .ld-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px dashed #eceef2;
+  font-size: .9rem;
+}
+.lead-step-body .ld-row:last-child { border-bottom: none; }
+.lead-step-body .ld-label { color: #8a8f98; font-weight: 600; }
+.lead-step-body .ld-value { text-align: right; font-weight: 500; }
+
+.ld-doc-card, .ld-pay-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid #eceef2;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+.ld-empty { color: #8a8f98; font-size: .88rem; padding: 12px 0; text-align: center; }
+
+.ld-photo-section-title {
+  font-size: .78rem;
+  font-weight: 700;
+  color: #8a8f98;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+  margin: 16px 0 8px;
+}
+.ld-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
+  gap: 8px;
+}
+.ld-photo-grid a {
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #eceef2;
+  aspect-ratio: 1 / 1;
+}
+.ld-photo-grid img,
+.ld-photo-grid video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
